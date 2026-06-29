@@ -52,9 +52,6 @@ Click the screenshot below to watch the complete demonstration.
 
 [![Watch Demo](https://github.com/user-attachments/assets/82a6a63c-64b4-4462-be67-4c503b36482c)](https://smbclouddrive.blob.core.windows.net/sitecontent/PQC-Demo.mp4)
 
-Direct video:
-
-https://smbclouddrive.blob.core.windows.net/sitecontent/PQC-Demo.mp4
 
 ---
 
@@ -95,20 +92,7 @@ https://smbclouddrive.blob.core.windows.net/sitecontent/PQC-Demo.mp4
 
 ---
 
-# Running the Demo
-
-Clone the repository
-
-```bash
-git clone https://github.com/<YOUR_USERNAME>/post-quantum-crypto-demo.git
-cd post-quantum-crypto-demo
-```
-
-Build and start
-
-```bash
-docker compose up --build -d
-```
+# Running the Demo after powering on the Server
 
 Open your browser
 
