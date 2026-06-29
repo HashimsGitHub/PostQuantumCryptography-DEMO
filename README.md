@@ -46,12 +46,6 @@ The demo includes four interactive scenarios:
 
 ---
 
-# Screenshot
-
-<img width="1839" height="1062" alt="PQC Demo" src="https://github.com/user-attachments/assets/82a6a63c-64b4-4462-be67-4c503b36482c" />
-
----
-
 # Live Video Demo
 
 Click the screenshot below to watch the complete demonstration.
