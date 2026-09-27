@@ -141,3 +141,29 @@ This project should **not** be used as a production cryptographic implementation
 This project is released for educational purposes.
 
 Contributions, improvements and suggestions are welcome.
+## Test locally before deploying to Vercel
+
+From the repository root, with Docker Desktop (or Docker Engine with Compose) running:
+
+```bash
+docker compose up --build
+```
+
+Open http://localhost/ and exercise all four scenarios in the UI. Verify the API:
+
+```bash
+curl -f http://localhost/api/health
+curl -f http://localhost/api/scenarios
+curl -f http://localhost/api/scenario/pqc-mlkem
+```
+
+The first build compiles liboqs and downloads its Python bindings, so it can take several minutes. Stop with `docker compose down`. This Compose setup tests the same app and cryptographic backend. To build the exact Vercel container images separately:
+
+```bash
+docker build -f backend/Dockerfile.vercel -t pqc-vercel-backend backend
+docker build -f frontend/Dockerfile.vercel -t pqc-vercel-frontend frontend
+```
+
+The Vercel images can be tested with `docker run --rm -p 8000:80 pqc-vercel-backend` and, in another terminal, `docker run --rm -p 8080:80 pqc-vercel-frontend`. The frontend container alone cannot route `/api` locally: Docker Compose provides that proxy locally, while `vercel.json` provides it on Vercel.
+
+After local testing, push the changes to a branch and import the repository in Vercel with the **repository root** as the project root. `vercel.json` defines the two services and same-origin `/api` routing. Container images on Vercel are currently a beta feature; consult Vercel's container image limits before deployment.
