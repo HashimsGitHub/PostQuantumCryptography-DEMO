@@ -92,12 +92,12 @@ Click the screenshot below to watch the complete demonstration.
 
 ---
 
-# Running the Demo after powering on the Server
+# Live Demo
 
 Open your browser
 
 ```
-http://hashimspqcdemo.australiaeast.cloudapp.azure.com/
+https://post-quantum-cryptography-demo.vercel.app/
 ```
 
 ---
